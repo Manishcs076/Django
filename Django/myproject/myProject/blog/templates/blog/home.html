@@ -1,7 +1,15 @@
 {% extends "blog/base.html"%}
 {%block content%}
   {%for post in posts%}
-    <h1>{{post.Name}}</h1>
-    <p>from {{post.Address}}<br>Email:- {{post.Email}} <br>Mobile No:- {{post.Mobile_number}}<br>Birthday:-{{post.Birthday}}</p>
+    <article class="media content-section">
+      <div class="media-body">
+        <div class="article-metadata">
+          <a class="mr-2" href="#">{{ post.Name }}</a>
+            <small class="text-muted">{{ post.Address }}</small>
+        </div>
+            <h2><a class="article-title" href="#">{{ post.Email }}</a></h2>
+            <p class="article-content">{{ post.Mobile_number }}</p>
+      </div>
+    </article>
   {%endfor%}
 {%endblock content%}
