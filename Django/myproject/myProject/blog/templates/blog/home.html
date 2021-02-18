@@ -1,17 +1,7 @@
-<!DOCTYPE html>
-<html>
-<head>
-    {% if title%}
-      <title>Django Blog-{{title}}</title>
-    {%else%}
-      <title>Django Blog</title>
-    {%endif%}
-</head>
-<body>
-    {%for post in posts%}
+{% extends "blog/base.html"%}
+{%block content%}
+  {%for post in posts%}
     <h1>{{post.Name}}</h1>
     <p>from {{post.Address}}<br>Email:- {{post.Email}} <br>Mobile No:- {{post.Mobile_number}}<br>Birthday:-{{post.Birthday}}</p>
-    {%endfor%}
-
-</body>
-</html>
+  {%endfor%}
+{%endblock content%}
