@@ -14,7 +14,7 @@ class Profile(models.Model):
     
 
     def save(self):
-        super.save()
+        super().save()
 
         img = Image.open(self.image.path)
 
